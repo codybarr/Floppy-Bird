@@ -1,12 +1,7 @@
 --[[
+	"Floppy Bird"
 	GD50 2018
 	Flappy Bird Remake
-
-	bird12
-	"The Mouse Update"
-
-	Author: Colton Ogden
-	cogden@cs50.harvard.edu
 
 	A mobile game by Dong Nguyen that went viral in 2013, utilizing a very simple 
 	but effective gameplay mechanic of avoiding pipes indefinitely by just tapping 
@@ -26,7 +21,6 @@ require 'StateMachine'
 require 'states/BaseState'
 require 'states/CountdownState'
 require 'states/PlayState'
-require 'states/PauseState'
 require 'states/ScoreState'
 require 'states/TitleScreenState'
 
@@ -103,7 +97,6 @@ function love.load()
 		['title'] = function() return TitleScreenState() end,
 		['countdown'] = function() return CountdownState() end,
 		['play'] = function() return PlayState() end,
-		['pause'] = function() return PauseState() end,
 		['score'] = function() return ScoreState() end
 	}
 	gStateMachine:change('title')

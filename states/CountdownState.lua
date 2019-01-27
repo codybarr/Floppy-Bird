@@ -1,11 +1,9 @@
 --[[
-    Countdown State
-    Author: Colton Ogden
-    cogden@cs50.harvard.edu
+	Countdown State
 
-    Counts down visually on the screen (3,2,1) so that the player knows the
-    game is about to begin. Transitions to the PlayState as soon as the
-    countdown is complete.
+	Counts down visually on the screen (3,2,1) so that the player knows the
+	game is about to begin. Transitions to the PlayState as soon as the
+	countdown is complete.
 ]]
 
 local Class = require('libs.hump.class')
@@ -15,29 +13,29 @@ CountdownState = Class{__includes = BaseState}
 COUNTDOWN_TIME = 0.75
 
 function CountdownState:init()
-    self.count = 3
-    self.timer = 0
+	self.count = 3
+	self.timer = 0
 end
 
 --[[
-    Keeps track of how much time has passed and decreases count if the
-    timer has exceeded our countdown time. If we have gone down to 0,
-    we should transition to our PlayState.
+	Keeps track of how much time has passed and decreases count if the
+	timer has exceeded our countdown time. If we have gone down to 0,
+	we should transition to our PlayState.
 ]]
 function CountdownState:update(dt)
-    self.timer = self.timer + dt
+	self.timer = self.timer + dt
 
-    if self.timer > COUNTDOWN_TIME then
-        self.timer = self.timer % COUNTDOWN_TIME
-        self.count = self.count - 1
+	if self.timer > COUNTDOWN_TIME then
+		self.timer = self.timer % COUNTDOWN_TIME
+		self.count = self.count - 1
 
-        if self.count == 0 then
-            gStateMachine:change('play')
-        end
-    end
+		if self.count == 0 then
+			gStateMachine:change('play')
+		end
+	end
 end
 
 function CountdownState:render()
-    love.graphics.setFont(hugeFont)
-    love.graphics.printf(tostring(self.count), 0, 120, VIRTUAL_WIDTH, 'center')
+	love.graphics.setFont(hugeFont)
+	love.graphics.printf(tostring(self.count), 0, 120, VIRTUAL_WIDTH, 'center')
 end
