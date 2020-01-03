@@ -1,12 +1,28 @@
-# Pong
+# Floppy Bird
+
+![Scrabble Solver](/assets/images/screenshot.png?raw=true)
 
 Assignment 1 for Harvard's CS50/GD50 Game Development class.
 You can audit for free here at the following websites:
 
-- [edX](https://www.edx.org/course/cs50s-introduction-to-game-development)
-- [Harvard.edu](https://cs50.harvard.edu/games/2019/spring/#pong)
+-   [edX](https://www.edx.org/course/cs50s-introduction-to-game-development)
+-   [Harvard.edu](https://cs50.harvard.edu/games/#flappy-bird)
 
-Author: Cody Barr
+## Installation
+
+1. Clone the repo
+2. Install the dependencies:
+    - `git submodule init`
+    - `git submodule update`
+3. Run with Love
+
+## Play
+
+If you just want to play the game feel free to download it from the releases page: https://github.com/codybarr/Floppy-Bird/releases
+
+Currently only has a MacOS App release.
+
+## History
 
 A mobile game by Dong Nguyen that went viral in 2013, utilizing a very simple
 but effective gameplay mechanic of avoiding pipes indefinitely by just tapping
@@ -16,11 +32,10 @@ for years prior. Illustrates some of the most basic procedural generation of gam
 levels possible as by having pipes stick out of the ground by varying amounts, acting
 as an infinitely generated obstacle course for the player.
 
-# Credits
+## Credits
 
 Much of the code here comes from CS50's Intro to Game development course.
 
-I've added increasingly difficult pipe gaps, some of my own image/sound assets,
-a pause feature, reward trophies, and mobile/touch support.
+I've added increasingly difficult pipe gaps, some of my own image/sound assets, a pause feature, reward trophies, and mobile/touch support.
 
 Source Repo: https://github.com/games50/fifty-bird
